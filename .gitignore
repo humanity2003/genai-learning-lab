@@ -1,0 +1,62 @@
+# ---------- Secrets (never commit these) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ---------- Node.js ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.pnpm-store/
+.yarn/
+
+# ---------- Build output ----------
+dist/
+build/
+out/
+.next/
+.turbo/
+*.tsbuildinfo
+coverage/
+
+# ---------- Gen AI project artifacts ----------
+# Local vector stores and embeddings caches
+chroma/
+.chroma/
+*.faiss
+*.index
+*.sqlite
+*.sqlite3
+*.db
+vector-store/
+embeddings-cache/
+
+# Agent memory / conversation dumps
+memory/*.json
+.memory/
+logs/
+*.log
+
+# Downloaded datasets and large documents used for RAG
+# (keep a small sample in a `sample-data/` folder instead)
+data/
+datasets/
+*.pdf
+!sample-data/*.pdf
+
+# ---------- Inngest ----------
+.inngest/
+
+# ---------- Editors and OS ----------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
